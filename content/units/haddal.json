@@ -1,0 +1,91 @@
+{
+  "outlineColor": "36363c",
+  "type": "naval",
+  "name": "Haddal",
+  "research": {
+    "parent": "gneiss",
+    "requirements": [
+      "crimsonium/9000",
+      "lead/14000",
+      "silicon/8600",
+     "metaglass/7400"
+     "plastanium/2400"
+    ]
+  },
+  "speed": 0.9,
+  "hitSize": 10,
+  "health": 870,
+  "faceTarget": false,
+  "armor": 6,
+  "range": 170,
+   "targetAir": true,
+  "rotateSpeed": 3,
+    "immunities": [
+    "freezing"
+  ],
+  "weapons": [
+    {
+
+      "reload": 20,
+       "name": "big-launcher"
+            "shootY": 8.5,
+ "shoot": {
+        "type": "shootPattern",
+        "shots": 3,
+        "shotDelay": 5
+      },
+      "inaccuracy": 10,
+      "xRand": 4,
+      "shootSound": "missile",
+      "velocityRnd": 0.4,
+      "mirror": false,
+
+      "x": 0,
+      "smoothReloadSpeed": 0.15,
+      "shootWarmupSpeed": 0.05,
+      "minWarmup": 0.9,
+      "shootY": 3,
+      "recoil": 0.1,
+      "shake": 1,
+ "top": true,
+      "rotate": true,
+      "shootSound": "missile",
+      "bullet": {
+        "type": "missileBulletType"
+        "width": 8,
+        "height": 8,
+        "frontColor": "ff8214",
+        "backColor": "FFFFFF",
+        "lifetime": 30,
+        "speed": 8,
+        "damage": 16,
+        "recoil": 0.5,
+        "trailLength": 5,
+        "splashDamage": 15,
+        "splashDamageRadius": 15,
+        "shrinkY": 0,
+        "shrinkX": 0,
+        "hitEffect": "flakExplosion"
+          
+        }
+      },
+ {
+        type: PointDefenseWeapon
+        name: point-defence-small
+        x: 5
+        y: -9
+        reload: 15
+        targetInterval: 9
+        targetSwitchInterval: 12
+        recoil: 0
+        shootSound: lasershoot
+        bullet: {
+            shootEffect: sparkShoot
+            hitEffect: pointHit
+            maxRange: 46
+            damage: 20
+        }
+    }
+
+  ]
+}

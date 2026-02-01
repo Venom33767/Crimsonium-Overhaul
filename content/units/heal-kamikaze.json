@@ -1,0 +1,115 @@
+
+  "type": "flying",
+  "name" : "Autolyx",
+  "description": "Shoots out a homing healing projectile, dying afterwards",
+  "lowAltitude": false,
+   "playerControllable": true,
+  "speed": 2,
+
+  "rotateSpeed": 10.5,
+
+  "research": {
+    "parent": "risso",
+    "requirements": [
+      "crimsonium/2900",
+      "lead/3200",
+      "silicon/1400",
+    ]
+   }
+  "accel": 0.5,
+  "drag": 0.5,
+  "trailLength": 8,
+  "trailColor": "84f491",
+  "engineColor": "84f491",
+
+  "flying": true,
+  "health": 100,
+  "hitSize": 8,
+  "armor": 1,
+  "engineOffset": 8
+  weapons: [
+    {
+      "reload": 120, 
+      "name": "heal-kamikaze-weapon"
+      "mirror": true,
+      "x": 0,
+      "smoothReloadSpeed": 0.15,
+      "shootWarmupSpeed": 0.05,
+      "minWarmup": 0.9,
+      "shootY": 3,
+      "recoil": 0.5,
+      "shake": 1,
+ "top": true,
+      "rotate": false,
+      "shootSound": "missile",
+
+"parts": [
+        {
+          "type": "RegionPart",
+          "suffix": "-side-l",
+
+          "mirror": false,
+
+          "outline": true,
+
+ "moves": [
+            {
+              "type": "PartMove",
+              "progress": "recoil",
+              "rot": 0,
+              "y": -0
+            }
+          ],
+     "y": 0,
+          "x": 0,
+          "moveY": -5,
+          "moveX": -2,
+        },
+{
+          "type": "RegionPart",
+          "suffix": "-side-r",
+
+          "mirror": false,
+
+          "outline": true,
+ "moves": [
+            {
+              "type": "PartMove",
+              "progress": "recoil",
+              "rot": 0,
+              "y": 0
+            }
+          ],
+     "y": 0,
+          "x": 0,
+
+           "moveY": -5,
+           "moveX": 2,
+        }
+    
+ ],
+
+      "bullet": {
+        "type": "missileBulletType",
+        "width": 11,
+        "height": 11,
+        "frontColor": "FFFFFF",
+        "backColor": "84f491",
+        "lifetime": 40,
+        "speed": 6,
+         "shootEffect": shootHeal
+        "damage": 5,
+         "trailLength": 8,
+  "trailColor": "84f491",
+        "recoil": 0.5,
+        "splashDamage": 0,
+        "healAmount": 50,
+        "killShooter": true
+        "splashDamageRadius": 60,
+        "shrinkY": 0,
+        "shrinkX": 0,
+        "hitEffect": "heal",
+        "collidesTeam": true
+        }
+      }
+ ]

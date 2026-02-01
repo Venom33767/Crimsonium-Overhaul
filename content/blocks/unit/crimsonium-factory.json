@@ -1,0 +1,63 @@
+{
+  "type": "UnitFactory",
+  "name": "Crimsonium Factory"
+  "researchCostMultiplier": 0.3,
+  "size": 3,
+  "consumes": {
+    "power": 5
+  },
+  "plans": [
+    {
+      "unit": "nekke",
+      "requirements": [
+        {
+          "item": "crimsonium",
+          "amount": 48
+        },
+        {
+          "item": "silicon",
+          "amount": 32
+        },
+        {
+          "item": "metaglass",
+          "amount": 40
+        }
+      ],
+      "time": 480
+    },
+ {
+      "unit": "healing-boat",
+      "requirements": [
+        {
+          "item": "crimsonium",
+          "amount": 28
+        },
+        {
+          "item": "silicon",
+          "amount": 60
+        },
+        {
+          "item": "metaglass",
+          "amount": 30
+        }
+      ],
+      "time": 480
+    }
+  ],
+  "requirements": [
+    {
+      "item": "silicon",
+      "amount": 240
+    },
+    {
+      "item": "graphite",
+      "amount": 120
+    },
+    {
+      "item": "crimsonium",
+      "amount": 180
+    }
+  ],
+  "category": "units",
+  "research": "ground-factory"
+}

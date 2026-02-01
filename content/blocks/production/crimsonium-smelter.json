@@ -1,0 +1,79 @@
+{
+ "name": "Silicon-Oxidizer",
+"type": "GenericCrafter",
+  "health": 200,
+  "size": 3,
+  "description": "Oxidizes silicon and lead, melting the results together to create crimsonium"
+  "hasItems": true,
+  "craftTime": 50,
+  "craftEffect": {
+    "type": "multiEffect",
+    "effects": [
+    {
+           type :  ParticleEffect  
+           particles : 10
+           sizeFrom : 10
+           sizeTo : 0.5 
+           length : 110 
+           layer: 109
+           lifetime : 90
+           lightColor : 6e6e6e
+           colorFrom :  6e6e6e  
+           colorTo :  6e6e6e  
+           cone : 360
+          followParent: false
+          rotWithParent: false
+        } ,
+ {
+      type: ParticleEffect
+      cone: 360
+      particles: 20
+      length: 110
+      baseLength: 4
+      lifetime: 90
+      line: true
+   layer: 110
+      colorFrom: ff8e4a
+      colorTo: 79401f
+  followParent: false
+          rotWithParent: false
+
+    }
+
+    ]
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawFlame",
+        "flameColor": "fca903"
+      }
+    ]
+  },
+  "hasPower": true,
+  "hasLiquids": false,
+  "updateEffect": "none",
+  "ambientSound": "respawning",
+  "ambientSoundVolume": 0.5,
+  "consumes": {
+  "power": 3,
+  "items": {
+    "items": [
+      "silicon/4",
+      "lead/4"
+    ]
+   }
+  },
+  "requirements": [
+    "lead/40",
+ "silicon/70",
+    "copper/50"
+  ],
+  "category": "crafting",
+  "research": "silicon-smelter",
+  "outputItem": "crimsonium/4"
+}
