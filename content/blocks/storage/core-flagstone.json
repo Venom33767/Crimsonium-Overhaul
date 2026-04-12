@@ -1,0 +1,22 @@
+
+type: CoreBlock
+name: "Core: Flagstone"
+description: An upgrade for the "Heartstone" core, has more health and item capacity.
+requirements: [
+ crimsonium/2600
+ ignizium/1400
+ silicon/2800
+ copper/3400
+ lead/2300
+]
+isFirstTier: false
+size: 4
+squareSprite: false
+alwaysUnlocked: false
+unitType: serpent
+health: 3250
+itemCapacity:  8000
+unitCapModifier: 12
+category: effect
+research: core-heartstone
+researchCostMultiplier: 0.05

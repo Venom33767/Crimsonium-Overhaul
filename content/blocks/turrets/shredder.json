@@ -1,0 +1,139 @@
+{
+ "name": "Shredder",
+
+ "description": "Launches fast discs at enemies",
+  "type": "ItemTurret",
+"drawer": {
+ "type": "DrawTurret",
+ "parts": [
+ {
+  "type": "RegionPart",
+        "suffix": "-ammo",
+        "progress": "recoil",
+        "under": false,
+        "moveY": 5,
+       "color": "ffffffff",        
+      "colorTo": "ffffff00",   
+      "mixColor": "ffffff00",     
+      "mixColorTo": "ffffff00", 
+        "layer": 81,
+        "outline": false
+},
+ {
+   "type": "RegionPart",
+   "suffix": "-top",
+   "progress": "recoil",
+   "mirror": false,
+   "under": false,
+   "layer": 82,
+   "onReload": true,
+  "outline": false
+}
+
+]
+}
+
+
+
+
+"shootType": {
+  "type": "basicBulletType",
+  "sprite": "crimsonium-overhaul-sawprojectile",
+},
+  "researchCostMultiplier": 0.9,
+  "squareSprite": false,
+  "outlineColor": "36363CFF",
+  "size": 3,
+  "health": 330,
+  "reload": 100,
+  "range": 240,
+  "velocityRnd": 0.25,
+  "shoot": {
+    "shots": 1,
+  },
+  "recoil": 0,
+  "rotateSpeed": 2.5,
+  "shootSound": "shotgun",
+  "ammoTypes": {
+    "graphite": {
+      "type": "BasicBulletType",
+      "lifetime": 40,
+      "speed": 9,
+      "pierce": true,
+      "pierceCap": 5,
+      "damage": 170,
+      "height": 25,
+      "width": 25,
+      "homingRange": 250, 
+       "homingPower": 0.15,
+            "layer": 81,
+            "buildingDamageMultiplier": 1.5,
+splashDamage": 30,
+            "splashDamageRadius": 25,
+            "buildingDamageMultiplier": 0.8,
+        "despawnHit": true,
+      "hitEffect": {
+        "type": "multiEffect",
+        "effects": [
+          {
+            "type": "ParticleEffect",
+            "line": true,
+            "particles": 10,
+            "lifetime": 45,
+            "interp": "circleOut",
+            "length": 75,
+            "cone": -40,
+            "strokeTo": 0,
+            "lightColor": "e0432b",
+            "lenFrom": 8,
+            "lenTo": 0,
+            "strokeFrom": 2,
+            "colorFrom": "e0432b",
+            "colorTo": "ff8214"
+          },
+          {
+            "type": "ExplosionEffect",
+            "waveColor": "ff8214",
+            "sparkColor": "ff8214",
+            "smokes": 4,
+            "smokeSize": 4.7,
+            "smokeSizeBase": 1.6,
+            "smokeRad": 36,
+            "waveLife": 10,
+            "waveStroke": 4.1,
+            "waveRad": 25,
+            "waveRadBase": 2.0,
+            "sparkLen": 7,
+            "sparks": 12
+
+          }
+        ]
+      },
+      "frontColor": "0000000",
+      "backColor": "FFFFFFF",
+      "lightOpacity": 0.0000001,
+      "lightRadius": 0.000000000000000000001,
+      "layer": 103,
+      "shrinkX": 0,
+      "shrinkY": 0,
+      "spin": 100,
+    }
+  },
+"requirements": [
+ { "item": "crimsonium", "amount": 200},
+ { "item": "copper", "amount": 340},
+ { "item": "lead", "amount": 330},
+ { "item": "graphite", "amount": 120},
+],
+   "hasLiquids" : true,
+"liquidCapacity":30,
+    "consumes":{
+		"coolant":{"liquid": "water", "amount":0.4,"optional":true},
+	},
+    "coolantMultiplier": 1
+
+  "envRequired": 0,
+  "enDisabled": 4,
+  "category": "turret",
+  "research": "flamer"
+}

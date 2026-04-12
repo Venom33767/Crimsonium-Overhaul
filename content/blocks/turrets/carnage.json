@@ -1,0 +1,136 @@
+{
+"type": "itemTurret",
+"name": "Carnage",
+"description": "Shoots slow, area damage bullets with insane crowd potential",
+"health": 770,
+"size": 4,
+"recoil": 3,
+"reload": 80,
+"range": 500,
+"inaccuracy": 0,
+"rotatespeed": 4,
+ "targetGround": true,
+ "targetAir": false,
+ "hasLiquids":true,
+ "maxAmmo": 20,
+ "hasPower": false,
+ "ammoPerShot": 5,
+   "shoot": {
+    "shots": 1,
+  },
+"drawer": {
+    "type": "drawTurret",
+    "parts": [
+      {
+        "type": "RegionPart",
+        "suffix": "-side",
+        "moveX": 2,
+        "mirror": true,
+        "outline": true,
+        "under": true,
+        "progress": "recoil"
+      }
+    ]
+  },
+
+    "ammoTypes": {
+        "crimsonium": {
+            "type": "ArtilleryBulletType",
+            "frontColor": "f8b872",
+            "backColor": "a66632",
+            "speed": 6,
+            "damage": 330,
+            "width": 40,
+            "height": 60,
+            "shootEffect": "shootBig",
+            "smokeEffect": "shootBigSmoke",
+            "lifetime": 200,
+           
+ "hitEffect": {
+    
+"type": "multiEffect",
+    "effects": [
+      {
+        "type": "WaveEffect",
+        "lifetime": 100,
+        "sizeFrom": 13,
+        "sizeTo": 60,
+        "strokeFrom": 3.5,
+        "strokeTo": 0,
+    lightColor :  f8b872  
+
+        "colorFrom": "f8b872",
+        "colorTo": "a66632"
+      },
+ {
+           type :  ParticleEffect  
+           particles : 100
+           sizeFrom : 2 
+           sizeTo : 0.5 
+           length : 110 
+           lifetime : 90 
+           interp :  fastSlow  
+           lightColor :  f8b872  
+           colorFrom :  f8b872  
+           colorTo :  a66632  
+           cone : 360
+          followParent: true
+          rotWithParent: true
+        },
+      {
+        "type": "ParticleEffect",
+        "particles": 1,
+        "sizeFrom": 40,
+        "sizeTo": 0,
+        "length": 0,
+        "lightColor": "f8b872",
+        "lifetime": 70,
+        "layer": 109,
+    lightColor :  f8b872  
+        "colorFrom": "f8b872",
+        "colorTo": "a66632"
+      },
+      {
+        "type": "ParticleEffect",
+        "particles": 1,
+        "sizeFrom": 30,
+        "sizeTo": 0,
+        "length": 0,
+        "lightColor": "f8b872",
+        "lifetime": 30,
+        "layer": 109,
+        "colorFrom": "FFFFFFF",
+        "colorTo": "FFFFFFF"
+      }
+    ]
+  },
+
+            "splashDamage": 700,
+            "splashDamageRadius": 30,
+            "buildingDamageMultiplier": 1.2,
+            
+            "trailLength": 30.5,
+            "trailWidth": 10.5,
+            "trailColor": "a66632",
+            "ammoMultiplier": 1
+          }
+      },
+"category": "turret" ,
+"shootSound": "powerfulShot",
+"research": "massacre",
+"requirements": [
+ { "item": "crimsonium", "amount": 360},
+ { "item": "titanium", "amount": 200},
+ { "item": "copper", "amount": 430},
+  { "item": "thorium", "amount": 380},
+  { "item": "silicon", "amount": 450},
+  { "item": "surge-alloy", "amount": 280},
+
+],
+"liquidCapacity":30,
+    "consumes":{
+		"coolant":{"liquid": "water", "amount":0.4,"optional":true},
+	},
+    "coolantMultiplier": 1
+
+}
