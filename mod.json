@@ -1,0 +1,15 @@
+{
+    "name": "crimsonium-overhaul",
+    "displayName": "Crimsonium Overhaul"
+    "subtitle": ""
+    "author": "popusk337"
+ 
+    "description": "A mod that adds some interesting turrets with different types of attacks,
+two new resources and new units! 
+  P.S. still WIP though, make sure to not miss out on updates! Discord user: pelmezavr4733"
+    "version": "0.5.8"
+    "minGameVersion": 146
+    "dependencies": [ ]
+    "hidden": true
+    "repo": "Venom33767/Crimsonium-Overhaul"
+}
